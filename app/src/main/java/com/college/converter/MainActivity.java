@@ -2,7 +2,9 @@ package com.college.converter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     static private final Float CONVERSION_RATE = 0.80F;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("Create1", "onCreate: Oncreate is Starting");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -34,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
         buttonConvert.setOnClickListener( view ->  {
             convertCurrency(view);
         } );
+        Log.i("Close1", "onCreate: Oncreate is Ending");
     }
 
     public void convertCurrency(View view) {
-
+        Log.i("Create2", "onCreate: convertCurrency is Starting");
         EditText inputView = findViewById(R.id.entryId);
 
         String inputAmount = inputView.getText().toString();
@@ -51,5 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
             resultView.setText( resultFloat + " Euros" );
         }
+        Log.i("Close2", "onCreate: convertCurrency is closing");
     }
 }
