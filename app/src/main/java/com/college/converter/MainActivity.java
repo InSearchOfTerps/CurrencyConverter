@@ -24,9 +24,12 @@ import android.widget.TextView;
 
 */
 
+
 public class MainActivity extends AppCompatActivity {
+
     static private final Float CONVERSION_RATE = 0.80F;
     static private String tag = "FunctionLog";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i(tag, "onCreate: Oncreate is Starting");
