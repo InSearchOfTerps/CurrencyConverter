@@ -2,7 +2,6 @@ package com.college.converter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         Log.i(tag, "onCreate: Oncreate is Starting");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void convertCurrency(View view) {
-        Log.i(tag, "onCreate: convertCurrency is Starting");
+        Log.i(tag, "convertCurrency: convertCurrency is Starting");
         EditText inputView = findViewById(R.id.entryId);
 
         String inputAmount = inputView.getText().toString();
@@ -59,6 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
             resultView.setText( resultFloat + " Euros" );
         }
-        Log.i(tag, "onCreate: convertCurrency is closing");
+        Log.i(tag, "convertCurrency: convertCurrency is closing");
     }
 }
